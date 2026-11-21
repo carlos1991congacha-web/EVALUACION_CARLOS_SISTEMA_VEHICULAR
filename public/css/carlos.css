@@ -1,0 +1,245 @@
+
+/* ===== DISEÑO GENERAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #eef2f8;
+    color: #1e293b;
+}
+
+/* ===== MENÚ PRINCIPAL ===== */
+nav {
+    background: linear-gradient(110deg, #111827, #312e81, #1d4ed8);
+    padding: 20px 35px;
+    box-shadow: 0 5px 20px rgba(15,23,42,0.18);
+}
+
+nav a {
+    color: #e0e7ff;
+    margin-right: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* ===== CONTENEDOR ===== */
+main {
+    max-width: 1200px;
+    margin: 35px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(15,23,42,0.07);
+}
+
+/* ===== TABLAS ===== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 7px;
+}
+
+thead th {
+    background: #1e293b;
+    color: #ffffff;
+    padding: 17px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+}
+
+thead th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+thead th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+tbody tr {
+    background: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background: #e8efff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37,99,235,0.08);
+}
+
+td {
+    padding: 16px;
+    color: #334155;
+    border-top: 1px solid #edf0f5;
+    border-bottom: 1px solid #edf0f5;
+}
+
+td:first-child {
+    border-left: 1px solid #edf0f5;
+    border-radius: 10px 0 0 10px;
+}
+
+td:last-child {
+    border-right: 1px solid #edf0f5;
+    border-radius: 0 10px 10px 0;
+}
+
+/* ===== BARRA DE HERRAMIENTAS ===== */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* ===== BOTONES ===== */
+.btn, button.btn {
+    background: linear-gradient(135deg, #4f46e5, #2563eb);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 5px 12px rgba(79,70,229,0.2);
+}
+
+.btn:hover, button.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(79,70,229,0.3);
+}
+
+/* ===== ACCIONES ===== */
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.actions form {
+    margin: 0;
+}
+
+button.link {
+    background: #e0e7ff;
+    color: #4338ca;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button.link:hover {
+    background: #4338ca;
+    color: white;
+}
+
+button.danger {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 9px 13px;
+    border-radius: 8px;
+}
+
+button.danger:hover {
+    background: #dc2626;
+    color: white;
+}
+
+/* ===== FORMULARIOS ===== */
+.field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+}
+
+input, select, textarea {
+    padding: 13px;
+    border: 1px solid #dbe2ef;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #f8fafc;
+    transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    background: #ffffff;
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(99,102,241,0.12);
+}
+
+/* ===== MENSAJES ===== */
+.error {
+    color: #dc2626;
+}
+
+.flash {
+    padding: 15px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.flash.ok {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.flash.error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* ===== BOTONES INFERIORES ===== */
+.buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+/* ===== DISEÑO RESPONSIVE ===== */
+@media (max-width: 768px) {
+    main {
+        margin: 12px;
+        padding: 16px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    nav {
+        padding: 15px;
+    }
+}
